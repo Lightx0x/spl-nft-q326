@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --require ts-node/register --test tests/spl.test.ts tests/nft.test.ts",
+    "test:devnet": "node --require ts-node/register --test tests/devnet.test.ts",
     "spl:init": "npx ts-node src/spl/spl_init.ts",
     "spl:metadata": "npx ts-node src/spl/spl_metadata.ts",
     "spl:mint": "npx ts-node src/spl/spl_mint.ts",

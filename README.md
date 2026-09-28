@@ -56,3 +56,27 @@ Asset: HePYfTtdDEHZHfkDVm5i85cGWtpm1d35UfiphoYHeRbA
 ```
 
 ![Tux Tux NFT on Solana Explorer](nft_screenshot.png)
+
+---
+
+## Tests
+
+### Offline unit tests
+
+Builds each instruction the scripts use, decodes it, and checks the fields. No network, no SOL spent, no wallet needed.
+
+```bash
+npm test
+```
+
+![npm test output](npm-test.png)
+
+### Devnet verification
+
+Reads the accounts listed above from devnet and Irys and checks their on-chain state (supply, balances, metadata, NFT owner). Read-only — nothing is signed or sent.
+
+```bash
+npm run test:devnet
+```
+
+![npm run test:devnet output](npm-devnet-test.png)
